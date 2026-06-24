@@ -1,3 +1,7 @@
+# 06_static_class_method.py
+# 학습일: 2026-06-24
+# 개념: @staticmethod, @classmethod
+
 class User:
     def __init__(self, name: str, email: str):
         self.name = name
