@@ -1,0 +1,28 @@
+#!/bin/sh
+
+bad_paths=$(
+  git diff --cached --name-only --diff-filter=ACMR |
+  awk '
+    {
+      path = $0
+      trimmed = path
+      sub(/^[[:space:]]+/, "", trimmed)
+      sub(/[[:space:]]+$/, "", trimmed)
+      n = split(path, parts, "/")
+      base = parts[n]
+      trimmed_base = base
+      sub(/^[[:space:]]+/, "", trimmed_base)
+      sub(/[[:space:]]+$/, "", trimmed_base)
+
+      if (path != trimmed || base != trimmed_base) {
+        print path
+      }
+    }
+  '
+)
+
+if [ -n "$bad_paths" ]; then
+  echo "Error: filenames with leading or trailing whitespace cannot be committed:" >&2
+  echo "$bad_paths" >&2
+  exit 1
+fi
