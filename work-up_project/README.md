@@ -15,34 +15,45 @@
 
 ```text
 work-up_project/
-├── 자료구조/
-│   ├── variable1.py
-│   ├── variable2.py
-│   ├── list.py
-│   ├── tuple.py
-│   ├── dictionary.py
-│   ├── set.py
-│   └── todo_list.py
-├── 흐름제어/
-│   ├── condition.py
-│   ├── loop.py
-│   ├── loop_score.py
-│   └── exception_handling.py
-├── 함수와모듈/
-│   ├── function.py
-│   ├── function2.py
-│   ├── dt_library.py
-│   ├── rand_library.py
-│   ├── req_library.py
-│   ├── module/
-│   └── calc/
-├── 객체지향프로그래밍/
-│   ├── person.py
-│   ├── programmer.py
-│   ├── farmer.py
-│   ├── actor.py
-│   ├── inheritance.py
-│   └── main.py
+├── 1주차/
+│   ├── 자료구조/
+│   │   ├── variable1.py
+│   │   ├── variable2.py
+│   │   ├── list.py
+│   │   ├── tuple.py
+│   │   ├── dictionary.py
+│   │   ├── set.py
+│   │   └── todo_list.py
+│   ├── 흐름제어/
+│   │   ├── condition.py
+│   │   ├── loop.py
+│   │   ├── loop_score.py
+│   │   └── exception_handling.py
+│   ├── 함수와모듈/
+│   │   ├── function.py
+│   │   ├── function2.py
+│   │   ├── dt_library.py
+│   │   ├── rand_library.py
+│   │   ├── req_library.py
+│   │   ├── module/
+│   │   └── calc/
+│   ├── 객체지향프로그래밍/
+│   │   ├── person.py
+│   │   ├── programmer.py
+│   │   ├── farmer.py
+│   │   ├── actor.py
+│   │   ├── account.py
+│   │   ├── user.py
+│   │   ├── scenario1.py
+│   │   ├── scenario2.py
+│   │   ├── bank_system.md
+│   │   ├── inheritance.py
+│   │   └── main.py
+│   ├── 알고리즘/
+│   │   └── quick_sort.py
+│   └── 챗봇/
+│       ├── scraper.py
+│       └── bot.py
 └── my_env/
 ```
 
@@ -83,6 +94,21 @@ Python에서 데이터를 다루는 기본 방법을 학습합니다.
 - 속성과 메서드
 - 상속
 - 직업별 클래스 예제 작성
+- 은행 계좌 시스템 시나리오 실습
+
+### 알고리즘
+
+기본 정렬 알고리즘을 직접 구현하며 동작 방식을 학습합니다.
+
+- 퀵 정렬 구현
+
+### 챗봇
+
+웹 스크래핑과 Discord 봇 연동을 실습합니다.
+
+- `requests`, `BeautifulSoup`을 사용한 상품 정보 수집
+- `discord.py`를 사용한 Discord 봇 메시지 전송
+- 봇 토큰을 환경변수로 관리
 
 ## 실행 방법
 
@@ -97,17 +123,24 @@ python 파일경로.py
 예시:
 
 ```bash
-python 자료구조/todo_list.py
-python 흐름제어/exception_handling.py
-python 함수와모듈/req_library.py
-python 객체지향프로그래밍/inheritance.py
+python 1주차/자료구조/todo_list.py
+python 1주차/흐름제어/exception_handling.py
+python 1주차/함수와모듈/req_library.py
+python 1주차/객체지향프로그래밍/inheritance.py
 ```
 
 가상환경을 사용하는 경우:
 
 ```bash
 source my_env/bin/activate
-python 함수와모듈/req_library.py
+python 1주차/함수와모듈/req_library.py
+```
+
+Discord 봇을 실행하는 경우 봇 토큰을 환경변수로 설정한 뒤 실행합니다.
+
+```bash
+export DISCORD_BOT_TOKEN="본인_디스코드_봇_토큰"
+python 1주차/챗봇/bot.py
 ```
 
 ## 현재 상태
@@ -124,4 +157,3 @@ python 함수와모듈/req_library.py
 - 실습 코드 개선
 - 과제 및 미니 프로젝트 정리
 - 배운 내용을 바탕으로 한 응용 예제 작성
-
